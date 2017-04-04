@@ -3,7 +3,7 @@ package edu.info448.review;
 /**
  * A class representing a gift box containing an object
  */
-public class GiftBox {
+public class GiftBox<T> {
 
 	private TeddyBear gift; //what is inside the box
 
@@ -15,5 +15,9 @@ public class GiftBox {
 	//unwraps the gift and returns what's inside
 	public TeddyBear openGift() {
 		return this.gift;
+	}
+
+	public void gift() {
+		GiftBox<TeddyBear> teddy = new GiftBox<TeddyBear>();
 	}
 }

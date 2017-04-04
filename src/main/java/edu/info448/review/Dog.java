@@ -4,7 +4,7 @@ package edu.info448.review;
  * A simple model class representing a Dog
  * @author Joel Ross
  */
-public class Dog extends Animal
+public abstract class Dog extends Animal
 {
 	public static final String BEST_BREED = "Husky";
 
@@ -24,8 +24,12 @@ public class Dog extends Animal
 		this("Fido");
 	}
 
+	public abstract void speak() {
+		bark();
+	}
+
 	public void bark() {
-		System.out.println(this+" says: Bark!");
+		System.out.println(this+" says: Bark Bark!");
 	}
 
 	public void wagTail(int times){
